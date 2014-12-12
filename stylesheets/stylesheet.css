@@ -242,19 +242,19 @@ form {
 /* GENERAL ELEMENT TYPE STYLES */
 
 h1 {
-  color: #d5000d;
+  /*color: #d5000d;*/
   font-size: 32px;
 } 
 
 h2 {
   font-size: 22px;
   font-weight: bold;
-  color: #303030;
+  color: #d5000d;
   margin-bottom: 8px;
 } 
 
 h3 {
-  color: #aaa;
+  color: #303030;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
