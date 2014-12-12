@@ -98,27 +98,27 @@
               <p>
                 The results varied for different phases, but as a whole, the features that were most important were the dominant rock type and the tectonic setting. Given that the type of volcano and how it was formed often times correlates to its eruptivity rate, these results are not suprising. The output of our code is as follows:
               </p>
-			  <code>
-				For phase type: Mf Phases
-				Best Features: ('Tectonic Setting', 'Crust')
+			  <p>
+				For phase type: Mf Phases<br/>
+				Best Features: ('Tectonic Setting', 'Crust')<br/>
 				Best Score: 0.570871681568
-				0.378563441806 0.0459840126533
-				For phase type: Mm Phases
-				Best Features: ('Cat Elevation', u'Region', 'Crust', u'Dominant Rock Type')
+				0.378563441806 0.0459840126533<br/><br/>
+				For phase type: Mm Phases<br/>
+				Best Features: ('Cat Elevation', u'Region', 'Crust', u'Dominant Rock Type')<br/>
 				Best Score: 0.434585272618
-				0.480537187222 0.037411469924
-				For phase type: Ssa Phases
-				Best Features: (u'Dominant Rock Type', 'Tectonic Setting')
+				0.480537187222 0.037411469924<br/><br/>
+				For phase type: Ssa Phases<br/>
+				Best Features: (u'Dominant Rock Type', 'Tectonic Setting')<br/>
 				Best Score: 0.578748400199
-				0.377816151885 0.0411730814277
-				For phase type: Diurnal Phases
-				Best Features: ('Crust', u'Region', u'Dominant Rock Type')
+				0.377816151885 0.0411730814277<br/><br/>
+				For phase type: Diurnal Phases<br/>
+				Best Features: ('Crust', u'Region', u'Dominant Rock Type')<br/>
 				Best Score: 0.47896001685
-				0.443913825355 0.0358134752086
-				For phase type: SemiDiurnal Phases
-				Best Features: (u'Region', 'Tectonic Setting', u'Dominant Rock Type')
+				0.443913825355 0.0358134752086<br/><br/>
+				For phase type: SemiDiurnal Phases<br/>
+				Best Features: (u'Region', 'Tectonic Setting', u'Dominant Rock Type')<br/>
 				Best Score: 0.512115591868			  
-			  </code>
+			  </p>
            <h3>
                (3) How well can we predict the phase at which a volcano will erupt based on volcanic and eruptive features?
             </h3>
@@ -126,7 +126,8 @@
 				Not extremely well, but better than no prediction power.
 			</h4>
               <p>
-                Considering the scores we received on the Random Forest test, it is very hard to predict volcanic eruptions when we examine the data from the standpoint that we used. We probably would have been better off using some form of Baye's Rule, however given the sparsity of eruptions for many volcanoes, we would not have the proper amount of data that we would need to build a really good classification model.  Hence, if we used Bayes' Rule, we would do something to the tune of:<br/><br/> What is the probability of an eruption occurring given that the volcano has feature X,Y,Z, is within this phase of the gravitational force and erupts according to this frequency.<br/><br/>The highest score was a .57, which does not given us a very good F1 score.              </p>
+                Considering the scores we received on the Random Forest test, it is very hard to predict volcanic eruptions when we examine the data from the standpoint that we used. We probably would have been better off using some form of Baye's Rule, however given the sparsity of eruptions for many volcanoes, we would not have the proper amount of data that we would need to build a really good classification model.  Hence, if we used Bayes' Rule, we would do something to the tune of:<br/><br/> What is the probability of an eruption occurring given that the volcano has feature X,Y,Z, is within this phase of the gravitational force and erupts according to this frequency.<br/><br/>The highest score was a .57, which does not given us a very good F1 score.
+				</p>
            <h3>
 				(4) Which tidal force correlates the strongest with volcanic eruptions?
             </h3>
