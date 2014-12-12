@@ -48,14 +48,15 @@
               <p>
               	Before we could use this dataset, we had to eliminate unreliable data. First, we eliminated all eruptions that were listed as unconfirmed or discredited. Next, we looked at start dates of eruptions. Because we are correlating onset of eruption with tidal phase, it is important to know the exact start date with no uncertainties. We eliminated any eruption that was missing a start year, month, or day, or had large uncertainties in the start date. After all of this we were left with 3,624 eruptions at 457 volcanoes with start dates ranging from 48 C.E. to 2014 C.E as shown in the histogram below.
               </p>
+              <p>
+              	<img alt='Histogram of Volcanic Eruptions' src = '/images/erup_hist.png'/>
+              </p>
+              <p>
+              	The eruption and volcano datasets also include a variety of features which are important when studying relationships between tides and eruptions. Below is a list of the most important volcanic features. 
+              </p>
               <ul>
-              	<li> Volcanic Explosivity Index (VEI)</li>
-              	  <p>This is a measure of the explosiveness of an eruption based on the length of eruption, how much material was erupted, and to what height this material was erupted. Values range from 0 to 8, with 0 being the lowest and 8 being the highest. 
-		  </p>
+              	<li>Volcanic Explosivity Index (VEI)</li>
 		<li>Dominant Rock Type</li>
-		  <p>
-		    This refers to the composition of the rock that was erupted from the volcano. Volcanic rocks can form a variety of compositions due to a variety of factors such as how deep the magma chamber was, how long it was in a magma chamber, the amount of volatiles in the magma etc. It has been suggested that the release of pressure due to tidal forces may allow bubbles to grow in the magma chamber causing eruption. Therefore, rock types formed with more volatiles may be more susceptible to tidal forces.
-		  </p>
 		<li>Eruption Length</li>
 		<li>Elevation</li>
 		<li>Tectonic Setting</li>
@@ -65,11 +66,18 @@
               Phase Data
             </h2>
               <p>
-				In order to check whether eruptions are related to solid earth tides, for each we must get the tidal spectrum for each tide we will check. To do this we modified a fortran code courtesy of Jerry Mitrovea of the EPS department which takes in a date and location and outputs a time series of the tidal spectrum.  Below we have calculated the tidal spectrum for an arbitrary eruption for long period (fortnightly, month, semiannual) , diurnal, and semidiurnal  tides. The shape of the spectrum are the same no matter where you are on the globe they are just shifted in time and amplitude. The amplitude of the spectrum represents meters of displacement of the crust . 
+		In order to check whether eruptions are related to solid earth tides, for each we must get the tidal spectrum for each tide we will check. To do this we modified a fortran code courtesy of Jerry Mitrovea of the EPS department which takes in a date and location and outputs a time series of the tidal spectrum.  Below we have calculated the tidal spectrum for an arbitrary eruption for long period (fortnightly, month, semiannual) , diurnal, and semidiurnal  tides. The shape of the spectrum are the same no matter where you are on the globe they are just shifted in time and amplitude. The amplitude of the spectrum represents meters of displacement of the crust . 
               </p>
-			  <p>
-				We then calculated the tidal spectra for every eruption. We already know the periods for the various tidal forces from astronomy, and with that we can easily calculate the phase at which a volcano erupted. The max within a cycle was set to zero degrees and the phase of the eruption calculated from there. Below are figures of 1.5 cycles of the five tidal forces we studied. 
-			  </p>
+		<p>
+		We then calculated the tidal spectra for every eruption. We already know the periods for the various tidal forces from astronomy, and with that we can easily calculate the phase at which a volcano erupted. The max within a cycle was set to zero degrees and the phase of the eruption calculated from there. Below are figures of one and a half cycles of the five tidal forces we studied. 
+		</p>
+		<p>
+		  <img alt = 'Fornightly Cycle', src = '/images/mf_cycle'/>
+		  <img alt = 'Monthly Cycle', src = '/images/mm_cycle'/>
+		  <img alt = 'Semiannual Cycle', src = '/images/ssa_cycle'/>
+		  <img alt = 'Diurnal Cycle', src = '/images/d_cycle'/>
+		  <img alt = 'SemiDiurnal Cycle', src = '/images/sd_cycle'/>
+		</p>
             
 
         <footer>
