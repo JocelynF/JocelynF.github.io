@@ -47,22 +47,7 @@
 				Yes. Most of them do.
 			</h4>
               <p>
-                Volcanic eruptions do in fact exhibit seasonality when we plotted the eruptions at the time they occurred within the tidal phase.  Here are some examples of various tidal forces:
-			  </p>
-			  <p>
-				<img alt='Tidal force' src='/images/tidal.png'/>
-			  </p>
-			  <p>
-				<img alt='Tidal force' src='/images/tidal1.png'/>
-			  </p>
-			  <p>
-				<img alt='Tidal force' src='/images/tidal2.png'/>
-			  </p>
-			  <p>
-				<img alt='Tidal force' src='/images/ssa_cycle.png'/>
-			  </p>	
-			  <p>
-				So now when we plot the number of eruptions that our occuring at different points in the phase, here are some interesting distributions we encountered:
+                Volcanic eruptions do in fact exhibit seasonality when we plotted the eruptions at the time they occurred within the tidal phase. So now when we plot the number of eruptions that our occuring at different points in the phase, here are some interesting distributions we encountered:
 			  </p>
 			  <p>
 				<img alt='Tidal force' src='/images/diurn1.png'/>
@@ -103,25 +88,21 @@
                 The results varied for different phases, but as a whole, the features that were most important were the dominant rock type and the tectonic setting. Given that the type of volcano and how it was formed often times correlates to its eruptivity rate, these results are not suprising. The output of our code is as follows:
               </p>
 			  <p>
-				For phase type: Mf Phases<br/>
-				Best Features: ('Tectonic Setting', 'Crust')<br/>
-				Best Score: 0.570871681568
-				0.378563441806 0.0459840126533<br/><br/>
-				For phase type: Mm Phases<br/>
-				Best Features: ('Cat Elevation', u'Region', 'Crust', u'Dominant Rock Type')<br/>
-				Best Score: 0.434585272618
-				0.480537187222 0.037411469924<br/><br/>
-				For phase type: Ssa Phases<br/>
-				Best Features: (u'Dominant Rock Type', 'Tectonic Setting')<br/>
-				Best Score: 0.578748400199
-				0.377816151885 0.0411730814277<br/><br/>
+				For phase type: Fornightly Phases<br/>
+				Best Features: Tectonic Setting, Crust<br/>
+				Best Score: 0.571<br/><br/>
+				For phase type: Monthly Phases<br/>
+				Best Features: Cat Elevation, Region, Crust, Dominant Rock Type<br/>
+				Best Score: 0.435<br/><br/>
+				For phase type: Semiannual Phases<br/>
+				Best Features: Dominant Rock Type, Tectonic Setting<br/>
+				Best Score: 0.579<br/><br/>
 				For phase type: Diurnal Phases<br/>
-				Best Features: ('Crust', u'Region', u'Dominant Rock Type')<br/>
-				Best Score: 0.47896001685
-				0.443913825355 0.0358134752086<br/><br/>
+				Best Features: Crust, Region, Dominant Rock Type<br/>
+				Best Score: 0.479<br/><br/>
 				For phase type: SemiDiurnal Phases<br/>
-				Best Features: (u'Region', 'Tectonic Setting', u'Dominant Rock Type')<br/>
-				Best Score: 0.512115591868			  
+				Best Features: Region, Tectonic Setting, Dominant Rock Type<br/>
+				Best Score: 0.512			  
 			  </p>
            <h3>
                (3) How well can we predict the phase at which a volcano will erupt based on volcanic and eruptive features?
