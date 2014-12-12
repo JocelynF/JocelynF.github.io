@@ -36,57 +36,49 @@
 
         <section id="main_content">
           <h1>
-           Volcanic and Phase Data
+           Data Wrangling
             <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>
           </h1>
             <h2>
-              Motivation
+              Volcano and Eruption Data
             </h2>
               <p>
-                The ability to predict volcanic eruptions has been a major area of study within volcanology for centuries. Historically, volcanic eruptions have created major humanitarian crises by causing large-scale losses of property and lives. In addition, large scale volcanic eruptions have the ability to effect global climate by adding large amounts of chemicals such as SO2 and CO2 into the atmosphere. For these reasons, it is important to understand the inner workings of volcanoes and what sort of processes effect their eruptions rates.
+              Volcano and eruption data for the last ~12,000 years was downloaded from the Smithsonian Global Volcanism Program Webpage (www.volcano.si.edu). This data includes 10,808 eruptions from 1,561 volcanoes worldwide. Below is a figure of the geographic location of all the volcanoes in the dataset with the size of each dot representing a volcano's elevation. 
               </p>
+              <p>
+              	Before we could use this dataset, we had to eliminate unreliable data. First, we eliminated all eruptions that were listed as unconfirmed or discredited. Next, we looked at start dates of eruptions. Because we are correlating onset of eruption with tidal phase, it is important to know the exact start date with no uncertainties. We eliminated any eruption that was missing a start year, month, or day, or had large uncertainties in the start date. After all of this we were left with 3,624 eruptions at 457 volcanoes with start dates ranging from 48 C.E. to 2014 C.E as shown in the histogram below.
+              </p>
+              <p>
+              	<img alt='Histogram of Volcanic Eruptions' src = '/images/erup_hist.png'/>
+              </p>
+              <p>
+              	The eruption and volcano datasets also include a variety of features which are important when studying relationships between tides and eruptions. Below is a list of the most important volcanic features. 
+              </p>
+              <ul>
+              	<li>Volcanic Explosivity Index (VEI)</li>
+		<li>Dominant Rock Type</li>
+		<li>Eruption Length</li>
+		<li>Elevation</li>
+		<li>Tectonic Setting</li>
+		<li>Location</li>
+              </ul>
             <h2>
-              Related Work
+              Phase Data
             </h2>
               <p>
-                While researching this topic we came across a variety of papers which discussed the seasonality of volcanic eruptions. Many people have shown that single volcanoes or subsets of volcanoes erupt more frequently during certain times of years than others [e.g. Sottilli and Palladino 2014]. One particular paper looked at volcanoes globally [Mason et al. 2004], and showed that there is a correlation between volcanic eruptions and eruption month. Although the researchers demonstrate that the seasonal fluctuations in eruptions correlate to hydrological cycles in certain regions (i.e. changes in water levels), they did not show the relationship between volcanic activity and tidal gravitational forcings that induce surface deformations on the earth (See Below: What are Solid Earth Tides).  In addition, their findings made us curious as to why differences in seasonal patterns existed between regions. 
+		In order to check whether eruptions are related to solid earth tides, for each we must get the tidal spectrum for each tide we will check. To do this we modified a fortran code courtesy of Jerry Mitrovea of the EPS department which takes in a date and location and outputs a time series of the tidal spectrum.  Below we have calculated the tidal spectrum for an arbitrary eruption for long period (fortnightly, month, semiannual) , diurnal, and semidiurnal  tides. The shape of the spectrum are the same no matter where you are on the globe they are just shifted in time and amplitude. The amplitude of the spectrum represents meters of displacement of the crust . 
               </p>
-            <h2>
-              Goal
-            </h2>
-              <p>
-                We seek to understand how various cyclical forces (also known as tidal forces) affect the rate of volcanic occurrences as well as the features of volcanoes that affect their susceptibility to these naturally occurring forces. Tidal forces are caused by celestial bodies, specifically the sun and the moon, as well as changes in the Earth's tilt and rotation. The combination of these forces can lead to movement in the crust on the meter scale. By changing the force exerted a specific location, volcanic processes might be greatly affected. For instance, less pressure may lead to gases exsolving from a magma within the Earth causing it to erupt. Alternatively, decreasing pressure may allow for more faults to be created which magma can travel through and erupt. Various studies have shown that volcanic eruptions follow a seasonal fluctuating pattern and that they seem to coincide with the solid earth deformations that occur from gravitational forces that have the most influence on Earth. 
-              </p>
-              <p>
-                We  hypothesize that there is a correlation between solid earth tides and global volcanic eruptions and that the relationship causes differences in volcanic activity throughout various regions in the world. For that reason, we seek to improve our understanding of the role that tidal forces play in global tectonic activity in order to predict the incidence of future volcanic activity. 
-              </p>
-            <h2>
-              Research Questions
-            </h2>
-              <ol>
-                <li>Do volcanic eruptions exhibit seasonal patterns?</li>
-               <li>What specific volcano attributes cause a volcano to be more susceptible to tidal forces? For instance, it is possible that a volcano that lies on the oceanic crust may be more susceptible to seasonal forces than one that lies on the continental crust.</li>
-                <li>How well can we predict the phase at which a volcano will erupt based on volcanic and eruptive features?</li>
-                <li>Which tidal force correlates the strongest with volcanic eruptions?</li>
-              </ol>
-            <h3>
-              What Are Solid Earth Tides?
-            </h3>
-              <p>
-                Similar to the oceans which respond to gravitational forces exerted by the moon and sun, the solid earth also deforms in response to these forces. The periodicity of these forces ranges from 3 times daily, to 18 years. The most well-known tidal force is the semi-diurnal (twice daily) tide of the moon which causes high and low tide at the beach.
-              </p>
-
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
+		<p>
+		We then calculated the tidal spectra for every eruption. We already know the periods for the various tidal forces from astronomy, and with that we can easily calculate the phase at which a volcano erupted. The max within a cycle was set to zero degrees and the phase of the eruption calculated from there. Below are figures of one and a half cycles of the five tidal forces we studied. 
+		</p>
+		<p>
+		  <img alt = 'Fornightly Cycle', src = '/images/mf_cycle.png'/>
+		  <img alt = 'Monthly Cycle', src = '/images/mm_cycle.png'/>
+		  <img alt = 'Semiannual Cycle', src = '/images/ssa_cycle.png'/>
+		  <img alt = 'Diurnal Cycle', src = '/images/d_cycle.png'/>
+		  <img alt = 'SemiDiurnal Cycle', src = '/images/sd_cycle.png'/>
+		</p>
+            
 
         <footer>
           This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
