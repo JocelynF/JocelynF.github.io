@@ -44,10 +44,10 @@
 				(1) Do volcanic eruptions exhibit seasonal patterns?
             </h3>
 			<h4>
-				Yes. Most of them do.
+				Yes. Some of them do.
 			</h4>
               <p>
-                Volcanic eruptions do in fact exhibit seasonality when we plotted the eruptions at the time they occurred within the tidal phase. So now when we plot the number of eruptions that our occuring at different points in the phase, here are some interesting distributions we encountered:
+                Volcanic eruptions do in fact exhibit seasonal patterns when we plotted the eruptions within the time they occurred of the tidal phase. Here are some interesting distributions we encountered:
 			  </p>
 			  <p align = 'center'>
 				<img alt='Tidal force' src='/images/diurn1.png'/>
@@ -74,6 +74,7 @@
 					<li>Semi-annual: 1.778 | P-value: 0.169</li>
 					<li>Fortnightly: 13.614| P-value: 0.0</li>
 				</ul>
+			</p>
              <p>
 				The Rayleigh test gives a statistic, which we looked up in a table.  Based on that table, the fortnightly and monthly have p-values that are significantly less than .05 and the solar semiannual has a p-value less than .2.  Based on these results, we reject the null hypothesis that there is no unimodal distribution and go in favor of the hypothesis that a unimodal distribution does in fact exist.<br/><br/>
 
@@ -82,10 +83,10 @@
                 (2) What are the specific volcano attributes that cause a volcano to be more susceptible to tidal forces? 
   			</h3>
 			<h4>
-				Dominant Rock Type and Tectonic Setting
+				Dominant Rock Type, Crust, and Tectonic Setting
 			</h4>
               <p>
-                The results varied for different phases, but as a whole, the features that were most important were the dominant rock type and the tectonic setting. Given that the type of volcano and how it was formed often times correlates to its eruptivity rate, these results are not suprising. The output of our code is as follows:
+                The results varied for different phases, but as a whole, the features that were most frequent ones seen. Given that the type of volcano and how it was formed often times correlates to its eruptivity rate, these results are not suprising. The output of our code is as follows:
               </p>
 			  <p>
 				For phase type: Fornightly Phases<br/>
@@ -111,16 +112,16 @@
 				Not extremely well, but better than no prediction power.
 			</h4>
               <p>
-                Considering the scores we received on the Random Forest test, it is very hard to predict volcanic eruptions when we examine the data from the standpoint that we used. We probably would have been better off using some form of Baye's Rule, however given the sparsity of eruptions for many volcanoes, we would not have the proper amount of data that we would need to build a really good classification model.  Hence, if we used Bayes' Rule, we would do something to the tune of:<br/><br/> What is the probability of an eruption occurring given that the volcano has feature X,Y,Z, is within this phase of the gravitational force and erupts according to this frequency.<br/><br/>The highest score was a .57, which does not given us a very good F1 score.
+                Considering the scores we received on the Random Forest test, we have moderate to low capabilities of predicting whether a volcano will fall on an upper or lower tide.  In the future, we would like to see the use of some sort of Bayes' Rule.  Given the sparsity of our data after wrangling, we did not have the proper amount of data that we would need to build a really good Bayes'' model.  Hence, if we used Bayes' Rule, we would do something to the tune of:<br/><br/> What is the probability of an eruption occurring given that the volcano has feature X,Y,Z, is within this phase of the gravitational force and erupts according to this frequency.<br/><br/>Given that our highest score was a .57, we do not consider that a very good F1 score.
 				</p>
            <h3>
 				(4) Which tidal force correlates the strongest with volcanic eruptions?
             </h3>
 			<h4>
-				Solar Semi-annual
+				Monthly
 			</h4>
               <p>
-                The semi-annual phase correlates the strongest, which seems to suggest that volcanoes eruption rates correlate strongest to the semi-annual period.  This is consistent with visual histograms found in the studies that we first encountered when we embarked on this journey.
+                The monthly phase correlates the strongest, which seems to suggest that volcanoes eruption rates correlate strongest to shorter periods.  This is consistent with some studies that correlated volcanic eruptivity rates to shorter cycles such as the fortnightly cycle.
   			  </p>
  
         <footer>
